@@ -1,6 +1,7 @@
 
 ## How to use this application
 
+```bash
 $ sudo npm install -g ionic cordova
 $ sudo cordova plugin add https://github.com/wildabeast/BarcodeScanner.git
 ```
