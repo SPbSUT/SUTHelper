@@ -1,0 +1,12 @@
+<ion-view view-title="Admin Info">
+  <ion-content>
+    <ion-item ng-repeat="item in items | orderBy: 'name'"
+              href="#/app/adm/{{category}}/{{item.objectId}}"
+              class="">
+      <p>{{item.title}}</p>
+      <p>{{item.updatedAt}}</p>
+      <p>{{item.description}}</p>
+    </ion-item>
+
+  </ion-content>
+</ion-view>
