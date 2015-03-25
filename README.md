@@ -3,7 +3,9 @@
 
 ```bash
 $ sudo npm install -g ionic cordova
-$ sudo cordova plugin add https://github.com/wildabeast/BarcodeScanner.git
+$ node tasks/platforms.js
+$ node tasks/plugins.js
+
 ```
 
 Then, to run it, cd into `SUTHelper` and run:
