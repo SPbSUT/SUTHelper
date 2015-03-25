@@ -46,3 +46,6 @@ function processPlugin(index) {
 }
 
 processPlugin(0);
+
+// script from :
+//http://jbavari.github.io/blog/2014/06/24/managing-cordova-plugins-with-package-dot-json-and-hooks/

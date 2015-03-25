@@ -15,3 +15,6 @@ packageJson.platforms.forEach(function(platform) {
     var platformCmd = 'cordova platform ' + command + ' ' + platform;
     exec(platformCmd);
 });
+
+// script from :
+//http://jbavari.github.io/blog/2014/06/24/managing-cordova-plugins-with-package-dot-json-and-hooks/
