@@ -8,10 +8,37 @@ $ node tasks/plugins.js
 
 ```
 
-Then, to run it, cd into `SUTHelper` and run:
+Then, to run the application, go into `SUTHelper`
 
 ```bash
-$ ionic platform add android
+$ cd SUTHelper
+```
+
+To run Android project in simulator
+
+```bash
 $ ionic build android
 $ ionic emulate android
 ```
+
+To run Android project on device
+
+```bash
+$ ionic run android
+```
+
+To run iOS project in simulator
+
+```bash
+$ ionic build ios
+$ ionic emulate ios
+```
+
+To run iOS project on device
+
+```bash
+$ ionic build ios
+$ open platforms/ios/SUTHelper.xcodeproj
+```
+
+Then run on device from xcode
