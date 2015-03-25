@@ -2,10 +2,13 @@
 <widget id="com.ionicframework.suthelper503903" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>SUTHelper</name>
   <description>
-        A project.
+        Application for foreigner student in Bonch Bruevich
     </description>
   <author email="ze0@my42.eu" href="http://my42.eu/">
       Aupetit Julien
+    </author>
+    <author email="gregoire.motot@frenchapp.fr" href="http://frenchapp.fr">
+        MOTOT Grégoire
     </author>
   <content src="index.html"/>
   <access origin="*"/>
