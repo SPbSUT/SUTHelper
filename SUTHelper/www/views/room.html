@@ -1,11 +1,30 @@
 <ion-view view-title="Admin Info">
   <ion-content>
-	<p>{{room.number}}</p>
-	<p>{{room.floor}} floor</p>
-	<p>{{room.title}}</p>
-	<p>{{room.content}}</p>
-	<p>{{room.workhours}}</p>
-	<p>{{room.phone}}</p>
-
+	<div class="roomHeader">
+	<p>
+		{{room.number}}
+		<sup class="floor">{{room.floor}} floor</sup>
+		<span class="title">{{room.title}}</span>
+		<a href="#/app/qrchoice"><i class="icon ion-close"></i></a>
+	</p>
+	</div>
+	<div class="roomBody">
+		<p class="label">Description:</p>
+		<p class="content">{{room.content}}</p>
+		<p class="label">Work Hours</p>
+		<p class="hours">{{room.workhours}}</p>
+		<p class="label">Phone Number</p>
+		<p class="phone">{{room.phone}}</p>
+	</div>
+	<div class="item tabs tabs-secondary tabs-icon-left positive roomFooter">
+	        <a class="tab-item" href="#">
+	          Go to this room
+	          <i class="icon ion-location"></i>
+	        </a>
+	        <a class="tab-item">
+	          Go to this room
+	          <i class="icon ion-man"></i>
+	        </a>
+	      </div>
   </ion-content>
 </ion-view>

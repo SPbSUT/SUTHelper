@@ -1,14 +1,18 @@
 <ion-view view-title="{{article.title}}">
 
 <ion-content>
-    <div>
-        <ion-list>
-            <li class="">
-                <p>{{article.title}}</p>
-                <p>{{article.content}}</p>
-                <p>{{article.updatedAt}}</p>
-                <img src="{{article.thumbnail}}">
-            </li>
-        </ion-list>
+
+    <div class="card">
+
+        <div class="item item-avatar">
+            <!--<img src="mcfly.jpg">-->
+            <h5>{{article.updatedAt}}</h5>
+            <h2>{{article.title}}</h2>
+        </div>
+        <div class="item item-text-wrap">
+              <p>{{article.content}}</p>
+              <img src="{{article.thumbnail}}">
+        </div>
+
     </div>
 </ion-content>

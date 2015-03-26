@@ -3,10 +3,109 @@
     position:absolute;
     right:10px;
 }
+a {
+	text-decoration: none;
+}
 .navbar{
     position:relative;
 }
 
 img {
 	width: 95%;
+}
+
+.card h5 {
+	color: #aaaaaa;
+}
+.card .center{
+	text-align: center;
+}
+
+.card .center input {
+	text-align: center;
+}
+
+.menu {
+	background: #F2F2F2;
+	text-align: center;
+}
+.bar-stable{
+	
+}
+
+.menu .item-content {
+	background: #F2F2F2;
+}
+
+/*.menu .item-content .current{
+	background: #E0E0E0;
+}*/
+
+/*.item.item-avatar {
+	padding: 5pt;
+}
+
+.card.information{
+	padding: 5pt;
+}*/
+.card.information h5 {
+	color: #aaaaaa;
+}
+
+
+.card button p{
+	width: 100%;
+}
+
+
+.roomHeader {
+	padding: 15pt;
+
+	border-bottom: 1px solid #ECECEC;
+}
+
+.roomHeader .floor {
+	color: #FF6F06;
+
+}
+
+.roomHeader p {
+	font-size: 1.5em;
+	width: 100%;
+}
+
+.roomHeader sup {
+	margin-right: 5%;
+}
+.roomHeader i{
+	position: absolute;
+	right: 15pt;
+}
+
+.roomBody {
+	padding: 15px;
+}
+
+.roomBody .content {
+	color: #969696;
+	margin-bottom: 15pt;
+}
+
+.roomBody .hours {
+	color: #969696;
+	font-size: 2em;
+	margin-bottom: 15pt;
+}
+
+.roomBody .phone {
+	color: #969696;
+	font-size: 2em;
+}
+
+.roomBody .label {
+	margin-bottom: 0pt;
+}
+
+.roomFooter:first-child {
+	border-right: 1px solid blue
 }

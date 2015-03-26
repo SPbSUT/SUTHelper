@@ -7,10 +7,13 @@ angular.module('SUTHelper.controllers',[])
 
 
 
-.controller('ArticleListController',['$scope','Parse',function($scope, Parse){
+.controller('ArticleListController',['$scope','Parse', 'vk',function($scope, Parse, vk){
     Parse.getAllNews().success(function(data){
         $scope.items=data.results;
     });
+    // vk.getNews().success(function(data){
+    //     console.log(data)
+    // })
 }])
 .controller('ArticleReadController',['$scope','Parse','$state','$stateParams',function($scope, Parse,$state,$stateParams){
     Parse.getAllNews().success(function(data){
@@ -55,7 +58,6 @@ angular.module('SUTHelper.controllers',[])
 
 }])
 .controller('qrchoiceController',['$scope', 'Parse','QRScanService', '$state' ,function($scope, Parse ,QRScanService, $state){
-
     $scope.qrcode = "Please Scan a room QRcode";
     $scope.room = {}
     $scope.scan = function() {

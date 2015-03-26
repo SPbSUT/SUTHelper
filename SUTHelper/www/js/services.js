@@ -74,4 +74,13 @@ angular.module('SUTHelper.QRScanService', []).factory('QRScanService', [function
     }
   };
 
-}])
+}]);
+
+
+angular.module('SUTHelper.vk',[]).factory('vk',['$http',function($http){
+    return {
+        getNews:function(){
+            return $http.get('https://api.vk.com/method/wall.get?domain=bonch.news.english&filter=all&count=20&offset=0');
+        }
+    }
+}]);

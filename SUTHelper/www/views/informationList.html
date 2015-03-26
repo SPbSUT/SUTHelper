@@ -1,12 +1,30 @@
 <ion-view view-title="Admin Info">
   <ion-content>
-    <ion-item ng-repeat="item in items | orderBy: 'name'"
-              href="#/app/adm/{{category}}/{{item.objectId}}"
-              class="">
-      <p>{{item.title}}</p>
-      <p>{{item.updatedAt}}</p>
-      <p>{{item.description}}</p>
-    </ion-item>
+    <div ng-repeat="item in items | orderBy: 'name'"
+              class="card">
+      <a href="#/app/adm/{{category}}/{{item.objectId}}">
+		  <div class="item item-avatar">
+		  	<img src="{{item.thumbnail}}">
+		      <h5>{{item.updatedAt}}</h5>
+		      <h4>{{item.title}}</h4>
+		  </div>
+
+		  <div class="item tabs tabs-secondary tabs-icon-left">
+	        <a class="tab-item" href="#">
+	          <i class="icon ion-person-stalker"></i>
+	          42 view
+	        </a>
+	        <a class="tab-item" >
+	          
+	        </a>
+	        <a class="tab-item">
+	          Read more
+	          <i class="icon ion-log-out"></i>
+	        </a>
+	      </div>
+
+      </a>
+    </div>
 
   </ion-content>
 </ion-view>
