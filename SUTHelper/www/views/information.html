@@ -1,10 +1,13 @@
-<ion-view view-title="Admin Info">
+<ion-view title="{{item.title}}">
   <ion-content>
-    <ion-item class="">
-      <p>{{item.title}}</p>
-      <p>{{item.updatedAt}}</p>
-      <p>{{item.content}}</p>
-    </ion-item>
 
+    <div class="card">
+
+        <div class="item item-text-wrap">
+       		<h5>{{item.updatedAt}}</h5>
+			<markdown ng-model="item.content"></markdown>
+        </div>
+
+    </div>
   </ion-content>
 </ion-view>

@@ -37,6 +37,13 @@ angular.module('SUTHelper.controllers',[])
 .controller('ADMListController',['$scope','Parse','$state','$stateParams',function($scope, Parse,$state,$stateParams){
     $scope.items = []
     $scope.category = $stateParams.id;
+    Parse.getCategories().success(function(data){
+        for (object in data.results) {
+            if (data.results[object].objectId == $stateParams.id) {
+                $scope.category = data.results[object].name
+            }
+        }
+    });
     Parse.getAllInformation().success(function(data){
     	for (object in data.results) {
     		if (data.results[object].categoriesId == $stateParams.id) {
@@ -46,7 +53,8 @@ angular.module('SUTHelper.controllers',[])
     })
 
 }])
-.controller('ADMInformationController',['$scope','Parse','$state','$stateParams',function($scope, Parse,$state,$stateParams){
+.controller('ADMInformationController',['$scope','Parse' ,'$state','$stateParams',function($scope, Parse,$state,$stateParams){
+    
     Parse.getAllInformation().success(function(data){
         $scope.item = data.results
         for (object in data.results) {
@@ -54,7 +62,7 @@ angular.module('SUTHelper.controllers',[])
                 $scope.item=data.results[object]
             }
         }
-    })
+    });
 
 }])
 .controller('qrchoiceController',['$scope', 'Parse','QRScanService', '$state' ,function($scope, Parse ,QRScanService, $state){

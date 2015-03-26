@@ -10,6 +10,10 @@ a {
     position:relative;
 }
 
+.bar.bar-energized .title  {
+	font-size: 1.7em;
+}
+
 img {
 	width: 95%;
 }
@@ -108,4 +112,10 @@ img {
 
 .roomFooter:first-child {
 	border-right: 1px solid blue
+}
+
+markdown h2 {
+	color: red;
+	text-decoration: underline;
+
 }
