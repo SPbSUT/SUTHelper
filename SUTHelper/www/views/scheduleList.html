@@ -1,0 +1,15 @@
+<ion-view view-title="Schedules">
+  <ion-content>
+    <ion-list>
+        <div class="card" ng-repeat="schedule in scheduleList">
+            <a href="#/app/scheduleList/{{schedule.id}}">
+                <div class="item item-text-wrap">
+
+                    <h2>{{schedule.name}}</h2>
+                   
+                </div>
+            </a>
+        </div>    
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,4 +1,3 @@
-
 angular.module('SUTHelper.parse',[]).factory('Parse',['$http','PARSE_CREDENTIALS',function($http,PARSE_CREDENTIALS){
     return {
         getAllNews:function(){

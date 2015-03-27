@@ -1,4 +1,3 @@
-
 angular.module('SUTHelper.controllers',[])
 
 .controller('AppController',['$scope','Parse',function($scope, Parse){
@@ -107,5 +106,19 @@ angular.module('SUTHelper.controllers',[])
         $scope.room = data
     })
 }])
+    .controller('ScheduleListCtrl', function($scope) {
+    $scope.scheduleList = [
+        { name: 'French', id: 1, url: 'https://www.google.com/calendar/embed?showDate=0&amp;showPrint=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;wkst=2&amp;hl=en&amp;bgcolor=%23ff9900&amp;src=98kd2qis7s72mb7uneqc8ckucg%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=Europe%2FMoscow' },
+        {name: 'Schedule 2', id: 2, url: '' },
+        { name: 'Schedule 3', id: 3, url: '' }
+    ];
+})
 
+    .controller('ScheduleCtrl', function($scope, $stateParams) {
+})
+
+    .controller('EventCtrl', function($scope, $stateParams) {
+})
+    .controller('ContactCtrl', function($scope, $stateParams) {
+})
 ;

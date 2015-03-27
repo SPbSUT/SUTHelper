@@ -96,6 +96,42 @@ angular.module('SUTHelper', ['ionic', 'SUTHelper.controllers','SUTHelper.vk','SU
               }
             }
         })
+            .state('app.scheduleList', {
+            url: "/scheduleList",
+            views: {
+                'menuContent': {
+                    templateUrl: "views/scheduleList.html",
+                    controller: 'ScheduleListCtrl'
+                }
+            }
+        })
+            .state('app.schedule', {
+            url: "/scheduleList/:id",
+            views: {
+                'menuContent': {
+                    templateUrl: "views/schedule.html",
+                    controller: 'ScheduleCtrl'
+                }
+            }
+        })
+            .state('app.event', {
+            url: "/event",
+            views: {
+                'menuContent': {
+                    templateUrl: "views/event.html",
+                    controller: 'EventCtrl'
+                }
+            }
+        })
+            .state('app.contact', {
+            url: "/contact",
+            views: {
+                'menuContent': {
+                    templateUrl: "views/contact.html",
+                    controller: 'ContactCtrl'
+                }
+            }
+        })
         ;
         $urlRouterProvider.otherwise('/app/articles');
 

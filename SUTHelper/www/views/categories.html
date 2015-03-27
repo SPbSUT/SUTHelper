@@ -1,10 +1,23 @@
 <ion-view title="Adminitration Information">
   <ion-content>
+      
+      <div class="card" ng-repeat="category in categories | orderBy: 'name'">
+          <a href="#/app/adm/{{category.objectId}}">
+              <div class="item item-text-wrap">
+
+                  <h2>{{category.name}}</h2>
+
+              </div>
+          </a>
+      </div>    
+      
+<!--
     <ion-item ng-repeat="category in categories | orderBy: 'name'"
               href="#/app/adm/{{category.objectId}}"
               class="">
       {{category.name}}
     </ion-item>
+-->
 
   </ion-content>
 </ion-view>
