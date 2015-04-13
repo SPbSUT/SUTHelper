@@ -1,19 +1,19 @@
 <ion-view title="News">
   <ion-content>
+
     <div ng-repeat="item in items | orderBy: 'updatedAt':true" class="card">
       <a href="#/app/read-article/{{item.objectId}}">
       <div class="item item-text-wrap">
           <h5>{{item.updatedAt}}</h5>
           <h2>{{item.title}}</h2>
-          <markdown ng-model="item.description"></markdown>
-
+          <p>{{item.description}}</p>
           <img src="{{item.thumbnail}}">
       </div>
 
       <div class="item tabs tabs-secondary tabs-icon-left">
         <a class="tab-item" href="#">
-          <i class="icon ion-thumbsup"></i>
-          {{ item.like }} like
+          <i class="icon ion-person-stalker"></i>
+          42 view
         </a>
         <a class="tab-item" href="#">
           

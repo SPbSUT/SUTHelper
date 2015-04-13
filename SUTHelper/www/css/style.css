@@ -149,3 +149,26 @@ markdown h1 {
     background-color:#ff7800
 
 }
+
+.info {
+	position: absolute;
+	bottom: 15pt;
+	width: 86%;
+	padding: 5pt;
+	background-color: black;
+	opacity: 0.9;
+
+
+}
+
+.info H2{
+	color: white;
+}
+
+.info H2 Strong {
+	font-size: 1.3em;
+}
+
+.info a {
+	color: white;
+}

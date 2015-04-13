@@ -128,7 +128,7 @@ angular.module('SUTHelper', ['ionic', 'SUTHelper.controllers','SUTHelper.vk','SU
             views: {
                 'menuContent': {
                     templateUrl: "views/contact.html",
-                    controller: 'ContactCtrl'
+                    controller: 'contactsController'
                 }
             }
         })

@@ -55,6 +55,14 @@ angular.module('SUTHelper.parse',[]).factory('Parse',['$http','PARSE_CREDENTIALS
                     'X-Parse-REST-API-Key':PARSE_CREDENTIALS.REST_API_KEY,
                 }
             });
+        },
+        getContacts:function(){
+            return $http.get('https://api.parse.com/1/classes/contact',{
+                headers:{
+                    'X-Parse-Application-Id': PARSE_CREDENTIALS.APP_ID,
+                    'X-Parse-REST-API-Key':PARSE_CREDENTIALS.REST_API_KEY,
+                }
+            });
         }
     }
 }]).value('PARSE_CREDENTIALS',{
