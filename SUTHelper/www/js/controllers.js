@@ -131,10 +131,11 @@ angular.module('SUTHelper.controllers',[])
 .controller('contactsController',['$scope','Parse',function($scope, Parse){
     Parse.getContacts().success(function(data){
         $scope.contacts=data.results;
+        for (var i=0; i<$scope.contacts.length; i++) {
+            if ($scope.contacts[i].photo == "")
+                $scope.contacts[i].photo = "./img/John_Doe.jpg"
+        }
     });
-    // vk.getNews().success(function(data){
-    //     console.log(data)
-    // })
 }])
 
 
@@ -142,15 +143,28 @@ angular.module('SUTHelper.controllers',[])
 
 
 
-    .controller('ScheduleListCtrl', function($scope) {
-    $scope.scheduleList = [
-        { name: 'French', id: 1, url: 'https://www.google.com/calendar/embed?showDate=0&amp;showPrint=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;wkst=2&amp;hl=en&amp;bgcolor=%23ff9900&amp;src=98kd2qis7s72mb7uneqc8ckucg%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=Europe%2FMoscow' },
-        {name: 'Schedule 2', id: 2, url: '' },
-        { name: 'Schedule 3', id: 3, url: '' }
-    ];
+    .controller('ScheduleListCtrl', function($scope, Parse) {
+    Parse.getCalendar().success(function (data) {
+        $scope.scheduleList = data.results
+        console.log($scope.scheduleList)
+    })
 })
 
-    .controller('ScheduleCtrl', function($scope, $stateParams) {
+    .controller('ScheduleCtrl', function($scope, $stateParams, Parse) {
+        Parse.getCalendar().success(function (data) {
+            $scope.scheduleList = data.results
+            console.log($scope.scheduleList)
+            
+            for (object in data.results) {
+            if (data.results[object].objectId == $stateParams.id) {
+                $scope.schedule=data.results[object]
+            }
+        }
+        })
+        /*var cssLink = document.createElement("link");
+        cssLink.href = "css/calstyle.css";  cssLink .rel = "stylesheet";  
+        cssLink .type = "text/css";  
+        frames['frame1'].document.body.appendChild(cssLink);*/ 
 })
 
     .controller('EventCtrl', function($scope, $stateParams) {
