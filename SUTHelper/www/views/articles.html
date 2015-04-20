@@ -7,7 +7,9 @@
           <h2>{{item.title}}</h2>
           <markdown ng-model="item.description"></markdown>
 
-          <img src="{{item.thumbnail}}">
+          
+          <img ng-if="item.thumbnail" src="{{item.thumbnail}}">
+          
       </div>
 
       <div class="item tabs tabs-secondary tabs-icon-left">

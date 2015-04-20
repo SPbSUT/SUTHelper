@@ -20,7 +20,8 @@ angular.module('SUTHelper.controllers',[])
             item.title = data.response[d].text.split('<br>')[0]
             item.description = data.response[d].text.substring(0, 200)
             item.like = data.response[d].likes.count
-            item.thumbnail = data.response[d].attachment.photo.src_big
+            if (data.response[d].attachment)
+                item.thumbnail = data.response[d].attachment.photo.src_big
             item.objectId = data.response[d].id
             $scope.items[d] = item
            }
@@ -95,6 +96,8 @@ angular.module('SUTHelper.controllers',[])
                 console.log("success: ------------------------------------")
                 console.log(result.text)
                 $scope.qrcode = result.text
+                if (result.text == "")
+                    alert('This room does not exist in the database')
                 $state.go('app.room',{id:result.text});
             }
         }, function(error) {
