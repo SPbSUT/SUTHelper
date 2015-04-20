@@ -22,6 +22,11 @@ img {
 	width: 50%
 }
 
+#roominput {
+	font-size: 1.4em;
+	text-align: center;
+}
+
 .card h5 {
 	color: #aaaaaa;
 }

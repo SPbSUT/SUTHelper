@@ -1,6 +1,14 @@
-<ion-view title="Adminitration Information">
+<ion-view title="Useful Information">
   <ion-content>
-      
+      <div class="card">
+          <a href="#/app/adm/1">
+              <div class="item item-text-wrap">
+
+                  <h2>All</h2>
+
+              </div>
+          </a>
+      </div>
       <div class="card" ng-repeat="category in categories | orderBy: 'name'">
           <a href="#/app/adm/{{category.objectId}}">
               <div class="item item-text-wrap">

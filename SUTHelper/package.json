@@ -13,7 +13,8 @@
     "org.apache.cordova.console",
     "org.apache.cordova.device",
     "org.apache.cordova.network-information",
-    "org.apache.cordova.splashscreen"
+    "org.apache.cordova.splashscreen",
+    "https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git"
   ],
   "dependencies": {
     "gulp": "^3.5.6",

@@ -1,10 +1,10 @@
-<ion-view title="QR Scanne">
+<ion-view title="Room Information">
   <ion-content>
 
 	<div class="card">
 		<div class="item item-text-wrap center">
-			<h2>Or type a room number</h2><br />
-		    <input type="number" placeholder="Type Your search here" name="number" ng-model="room.number" required></input><br />
+			<!--<h2>Type a room number</h2><br />-->
+		    <input id="roominput" type="number" placeholder="Type a room number here" name="number" ng-model="room.number" required></input><br />
 			<button class="button button-stable" ng-click="search()">
 		  		Search
 			</button>
@@ -15,7 +15,7 @@
 	<div class="card">
 	  <div class="item item-text-wrap center" ng-click="scan()"><br />
 	  		<img id="qrpic" src="img/qrcode.png">
-	  		<h2>Scan QRcode</h2><br />
+	  		<h2>Or scan a room QRcode</h2><br />
 	  </div>
 	</div>
 <!-- 	<button class="button button-stable" ng-click="goroom()">

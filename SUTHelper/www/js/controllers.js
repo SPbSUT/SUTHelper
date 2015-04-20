@@ -64,14 +64,22 @@ angular.module('SUTHelper.controllers',[])
             }
         }
     });
-    Parse.getAllInformation().success(function(data){
-    	for (object in data.results) {
-    		if (data.results[object].categoriesId == $stateParams.id) {
-    			$scope.items.push(data.results[object])
-    		}
-    	}
-    })
-
+    if ($stateParams.id == 1) {
+        Parse.getAllInformation().success(function(data){
+            for (object in data.results) {
+                $scope.items.push(data.results[object])
+                $scope.category = "All"
+            }
+        })
+    } else {
+        Parse.getAllInformation().success(function(data){
+        	for (object in data.results) {
+        		if (data.results[object].categoriesId == $stateParams.id) {
+        			$scope.items.push(data.results[object])
+        		}
+        	}
+        })
+    }
 }])
 .controller('ADMInformationController',['$scope','Parse' ,'$state','$stateParams',function($scope, Parse,$state,$stateParams){
     
