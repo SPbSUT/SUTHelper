@@ -18,12 +18,24 @@ img {
 	width: 95%;
 }
 
+#readmore {
+	border-top: 1px solid #ccc;
+	width: 100%;
+	padding-right: 15pt;
+	padding-top: 10pt;
+	text-align: right;
+
+}
 #qrpic {
 	width: 50%
 }
 
 #roominput {
 	font-size: 1.4em;
+	text-align: center;
+}
+#roominput::placeholder {
+	
 	text-align: center;
 }
 
