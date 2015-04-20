@@ -55,7 +55,7 @@ angular.module('SUTHelper.controllers',[])
 
 .controller('ADMListController',['$scope','Parse','$state','$stateParams',function($scope, Parse,$state,$stateParams){
     $scope.items = []
-    $scope.category = $stateParams.id;
+    //$scope.category = "loading ...";
     Parse.getCategories().success(function(data){
         for (object in data.results) {
             if (data.results[object].objectId == $stateParams.id) {
