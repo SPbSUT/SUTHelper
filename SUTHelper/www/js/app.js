@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('SUTHelper', ['ionic', 'SUTHelper.controllers','SUTHelper.vk','SUTHelper.parse', 'SUTHelper.QRScanService'])
+angular.module('SUT', ['ionic', 'SUT.controllers','SUT.vk','SUT.parse', 'SUT.QRScanService'])
 
 .run(function($ionicPlatform,$state) {
   $ionicPlatform.ready(function() {

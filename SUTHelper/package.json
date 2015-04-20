@@ -1,8 +1,8 @@
 {
-  "name": "suthelper",
+  "name": "SUT",
   "version": "1.0.0",
-  "description": "SUTHelper: An Ionic project",
-  "author": "",
+  "description": "The Bonch-Bruevich Saint - Petersburg State University of Telecommunications ",
+  "author": "ze0",
   "license": "ISC",
   "platforms": [
     "ios",

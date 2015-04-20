@@ -1,4 +1,4 @@
-angular.module('SUTHelper.parse',[]).factory('Parse',['$http','PARSE_CREDENTIALS',function($http,PARSE_CREDENTIALS){
+angular.module('SUT.parse',[]).factory('Parse',['$http','PARSE_CREDENTIALS',function($http,PARSE_CREDENTIALS){
     return {
         getAllNews:function(){
             return $http.get('https://api.parse.com/1/classes/news',{
@@ -78,7 +78,7 @@ angular.module('SUTHelper.parse',[]).factory('Parse',['$http','PARSE_CREDENTIALS
     REST_API_KEY:'TS0WZuxe3DfaLxOQVa9sm8NdzOJkhUGsW6v0Dexe'
 });
 
-angular.module('SUTHelper.QRScanService', []).factory('QRScanService', [function () {
+angular.module('SUT.QRScanService', []).factory('QRScanService', [function () {
 
   return {
     scan: function(success, fail) {
@@ -92,7 +92,7 @@ angular.module('SUTHelper.QRScanService', []).factory('QRScanService', [function
 }]);
 
 
-angular.module('SUTHelper.vk',[]).factory('vk',['$http',function($http){
+angular.module('SUT.vk',[]).factory('vk',['$http',function($http){
     return {
         getNews:function(){
             return $http.get('https://api.vk.com/method/wall.get?domain=bonch.news.english&filter=all&count=20&offset=0');

@@ -1,5 +1,5 @@
 
-// angular.module('SUTHelper.controllers', [])
+// angular.module('SUT.controllers', [])
 
 // .controller('ADMController',['$scope','Adm','$state','$stateParams',function($scope,Adm,$state,$stateParams){
 //     Adm.getCategories().success(function(data){

@@ -1,4 +1,4 @@
-angular.module('SUTHelper.controllers',[])
+angular.module('SUT.controllers',[])
 
 .controller('AppController',['$scope','Parse',function($scope, Parse){
 	//-
